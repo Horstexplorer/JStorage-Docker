@@ -5,4 +5,5 @@ RUN apk update &&\
     cd /JSTORAGEINSTALL &&\
     wget "https://ci.netbeacon.de/repository/download/JStorage_Build/latest.lastSuccessful/JStorage-all.jar?guest=1" -O "JStorage.jar" &&\
     chmod +x JStorage.jar
+EXPOSE 80 8888
 ENTRYPOINT cd /JSTORAGEINSTALL && java -jar JStorage.jar $ARGS
