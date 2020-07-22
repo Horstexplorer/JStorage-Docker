@@ -13,9 +13,9 @@ Use something like that to execute
 docker run 
 -it                                                                         // ! run interactive !
 --name="JStorage" 
---log-driver=none                                                           // disable logging (otherwise it might catch some keys on the input)
--v <host>/certificate.pem:/JSTORAGEINSTALL/jstorage/cert/certificate.pem    // mount cert file
--v <host>/key.pem:/JSTORAGEINSTALL/jstorage/cert/key.pem                    // mount key file
+--log-driver=none                                                           // ! disable logging (otherwise it might catch some keys on the input)
+-v <host>/certificate.pem:/JSTORAGEINSTALL/jstorage/cert/certificate.pem    // ! mount cert file - Using the included certificate & key is not recommended
+-v <host>/key.pem:/JSTORAGEINSTALL/jstorage/cert/key.pem                    // ! mount key file - Using the included certificate & key is not recommended
 -v <host>/data/:/JSTORAGEINSTALL/jstorage/data/                             // mount data dir
 -v <host>/config/:/JSTORAGEINSTALL/jstorage/config/                         // mount config
 -p 80:80/tcp                                                                // expose default ports for the hello socket
