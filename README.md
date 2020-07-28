@@ -18,7 +18,8 @@ docker run
 -v <host>/key.pem:/JSTORAGEINSTALL/jstorage/cert/key.pem                    // ! mount key file - Using the included certificate & key is not recommended
 -v <host>/data/:/JSTORAGEINSTALL/jstorage/data/                             // mount data dir
 -v <host>/config/:/JSTORAGEINSTALL/jstorage/config/                         // mount config
--p 443:443/tcp                                                                // expose default ports for the hello socket
+-p 443:443/tcp                                                              // expose default ports for the hello socket
+-p 8887:8887/tcp                                                            // expose default ports for the notification socket
 -p 8888:8888/tcp                                                            // expose default ports for the api socket
 -e ARGS=<jstorage command line arguments>                                   // add arguments to the execution
 horstexplorer/jstorage:<tag>
