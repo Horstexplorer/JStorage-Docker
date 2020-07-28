@@ -7,5 +7,5 @@ RUN apk update &&\
     chmod +x JStorage.jar &&\
     mkdir -p /jstorage/{cert, config, data}
 COPY certificate.pem key.pem /JSTORAGEINSTALL/jstorage/cert/
-EXPOSE 80 8887 8888
+EXPOSE 443 8888
 ENTRYPOINT cd /JSTORAGEINSTALL && java -jar JStorage.jar $ARGS
